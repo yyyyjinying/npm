@@ -1,10 +1,10 @@
 {
-  "name": "r-form-antd",
-  "version": "1.0.0",
+  "name": "x-form-antd",
+  "version": "1.0.11",
   "description": "依赖antd快速创建自定义form表单组件",
   "main": "./dist/webpack-zhao.js",
   "types": "dist/types/index.d.ts",
-  "repository": "https://github.com/yyyyjinying/npm.git/r-form-antd",
+  "repository": "https://github.com/yyyyjinying/npm.git",
   "keywords": [
     "form",
     "antd",
