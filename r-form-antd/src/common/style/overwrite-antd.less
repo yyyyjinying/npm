@@ -1,0 +1,72 @@
+@import url("./@x.less");
+
+.overwrite-button-input-select-form-antd{
+
+    .ant-select-selection_placeholder,
+    .ant-select-search_field_placeholder {
+        color: @input-default-placeholder-text-color;
+    }
+
+    .ant-form-item-label {
+        label {
+            color: @input-lable-color;
+        }
+    }
+
+    .ant-input-affix-wrapper,
+    .ant-input-number,
+    .ant-input-number-input,
+    .ant-calendar-picker {
+        .ant-input {
+            &:hover {
+                border-color: @input-hover-border-color;
+            }
+        }
+    }
+
+    .ant-input-color-border {
+        border-color: @input-default-border-color;
+        color: @input-default-text-color;
+
+        &::-webkit-input-placeholder {
+            color: @input-default-placeholder-text-color;
+        }
+    }
+
+    .ant-calendar-range-picker-input {
+        &::-webkit-input-placeholder {
+            color: @input-default-placeholder-text-color;
+        }
+    }
+
+    .ant-input,
+    .ant-input-number,
+    .ant-input-number-input,
+    .ant-select-selection--single {
+        line-height: 28px;
+        height: 28px;
+        .ant-input-color-border();
+    }
+
+    .ant-select-selection--multiple {
+        min-height: 28px;
+        .ant-input-color-border();
+    }
+
+    .ant-calendar-picker-input {
+        line-height: 1.5;
+        .ant-input-color-border();
+    }
+
+    .ant-input[disabled],
+    .ant-input-number-disabled,
+    .ant-select-disabled .ant-select-selection {
+        background-color: rgba(148, 199, 217, 0.15);
+        color: @input-default-text-color;
+    }
+
+    .ant-btn {
+        line-height: 28px;
+        height: 28px;
+    }
+}

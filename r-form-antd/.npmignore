@@ -1,0 +1,6 @@
+**/node_modules
+**/mock
+**/dist/esm
+**/dist/manifest
+**/src
+
