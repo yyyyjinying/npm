@@ -8,7 +8,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = merge(
   {
     entry: {
-      home: path.resolve(__dirname, '../src') + '/app.jsx',
+      home: path.resolve(__dirname, '../src') + '/app.tsx',
     },
     output: {
       filename: '[name].js',
