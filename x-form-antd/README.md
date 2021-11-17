@@ -32,6 +32,7 @@
 - npm unpublish packageName --force //npm撤销（24小时内可以撤销
 
 # 项目工程
+### 本环境的node版本v10.22.0 | npm版本 6.14.6
 ### 本地执行
 - npm run dev
 ### 本地打包
