@@ -1,6 +1,7 @@
 import React from 'react';
 import Form from '@common/components/base/form';
 import {Button} from "antd";
+import Upload from "@common/components/upload";
 class ZForm extends React.Component<any, any> {
   constructor(props:any) {
     super(props);
@@ -50,7 +51,7 @@ class ZForm extends React.Component<any, any> {
       <div>
         <Form
           ref="formRef"
-          // className="z-form"
+          className="z-form"
           onValuesChange={this.onValuesChange.bind(this)}
           onSubmit={this.onSubmit.bind(this)}
           columns={[
@@ -72,6 +73,7 @@ class ZForm extends React.Component<any, any> {
                 allowClear: true,
                 disabled: false,
                 placeholder: '请输入',
+                suffix: <span>1</span>
               },
               decorator: {
                 initialValue: this.state.params.num,
@@ -93,7 +95,7 @@ class ZForm extends React.Component<any, any> {
                 allowClear: true,
                 disabled: false,
                 placeholder: '请输入',
-              },
+              },             
               decorator: {
                 initialValue: this.state.params.select,
                 rules: [{ required: true, message: '请输入国航编码' }],
@@ -107,6 +109,19 @@ class ZForm extends React.Component<any, any> {
               visible: true, // 是否使用
               ele:() => {
                 return <Button onClick={this.onSubmit.bind(this)}>查询</Button>
+              }
+            },
+            {
+              span: 24,
+              title: 'btn',
+              dataIndex: 'btn',
+              className:"export",
+              type: "eleType",
+              visible: true, // 是否使用
+              ele:() => {
+                return <div>
+                  <Upload/>
+                </div>
               }
             },
           ]}

@@ -29,13 +29,15 @@ module.exports = {
     ecmaVersion: 2018, // 允许解析最新的 ECMAScript 特性
     sourceType: 'module', // 允许使用 import
   },
-  plugins: ['@typescript-eslint'], // 'react'
+  plugins: ['@typescript-eslint', 'react-hooks'], // 'react'
   /**自定义规则
     "off" 或0， 关闭规则
     "warn" 或1， 使用警告
     "error"或2 使用错误
   */
   rules: {
+    'react-hooks/rules-of-hooks': 'error', // 检查 Hook 的规则
+    'react-hooks/exhaustive-deps': 'warn', // 检查 effect 的依赖
     '@typescript-eslint/no-empty-function': 0,
     '@typescript-eslint/explicit-module-boundary-types': 0,
     '@typescript-eslint/rule-name': 0,

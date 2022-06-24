@@ -18,15 +18,36 @@ axios.interceptors.response.use(
 );
 
 const Request = {
-  get: (url, params = {}) => axios.get(url, { params }),
-  getLoading: async (url, params = {}) => {
-    const promise = await axios.get(url, { params });
-    return promise;
+  get: async (url, params = {}, headers = {}) => {
+    return await axios.post(
+      url,
+      { params },
+      {
+        headers: {
+          ...headers,
+        },
+      },
+    );
   },
-  post: (url, params = {}, headers = null) => axios.post(url, params, headers),
-  postLoading: async (url, params = {}, headers = null) => {
-    const promise = await axios.post(url, params, headers);
-    return promise;
+  post: async (url, params = {}, headers = {}) => {
+    return await axios.post(url, params, {
+      headers: {
+        ...headers,
+      },
+    });
+  },
+  uplaod: async (url, params = {}, headers = {}) => {
+    // 拼接formDAta
+    const formData = new FormData();
+    for (const key in params) {
+      formData.append(key, params[key]);
+    }
+    return await axios.post(url, formData, {
+      headers: {
+        ...headers,
+        'Content-Type': 'application/x-www-form-urlencoded', // 不进
+      },
+    });
   },
 };
 

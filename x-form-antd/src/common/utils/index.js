@@ -1,2 +1,3 @@
-import Request from 'request';
-export { Request };
+import Request from './request';
+import FetchRequest from './fetch';
+export { Request, FetchRequest };
